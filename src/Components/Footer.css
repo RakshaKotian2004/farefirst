@@ -1,0 +1,300 @@
+.footer{
+    background-attachment:fixed;
+}
+
+/* --------------------------------------Download----------------------------------------------------- */
+.bottom{
+    background-color:#0d6efd;
+    height:480px;
+    text-align: center;
+    margin-top:40px;
+    margin:0;
+}
+
+
+.heading1{
+    color:white;
+    font-size:30px;
+    text-align:justify;
+    padding-left:350px;
+    padding-top:30px;                             
+}
+
+
+.para1{
+    font-size:20px;
+    color:white;
+    text-align:justify;
+    padding-left:350px;
+    padding-top:30px;     
+    padding-top:10px;
+}
+
+.phone{
+    width:250px;
+    height:400px;
+    margin-left:600px;
+    padding-top:-1000px;
+    margin-top:-100px
+}
+
+
+.google,.appstore{
+    margin-top:10px;
+    width:200px;
+}
+
+
+.appstore{
+    margin-left:30px;
+}
+
+
+.gallery,.indus{
+    margin-top:20px;
+    width:200px;
+}
+
+
+.indus{
+    margin-left:30px;
+}
+
+
+.bixby,.galaxy{
+    margin-top:20px;
+    width:200px;
+}
+
+
+
+.bixby{
+    margin-left:30px;
+}
+
+
+.rows21{
+    border:none;
+    height:1000px;
+    margin-top:-300px;
+    margin-left:-200px;
+}
+
+/*----------------------------------------Email-------------------------------------------------------  */
+.input{
+    background-color:white;
+    height:230px;
+    margin-top:-20px;
+}
+
+.footerheading{
+    color:black;
+    align-items: center;
+    font-size:30px;
+    padding-left:300px;
+    padding-top:-100px;
+    margin-left:150px;
+}
+
+
+.input i{
+    margin-left:350px;
+    padding-top:50px;
+    font-size:70px;
+}
+
+    
+.input h4{
+    margin-top:-100px; 
+}    
+    
+
+.button3 {
+    height: 45px;
+    width:130px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 15px;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+}
+
+
+.button3 a{
+    text-decoration:none;
+    color:white;
+    font-size:16px;
+}
+
+
+.form{
+    display:flex;
+    padding-left:350px;
+}
+
+
+.email{
+    height: 35px;
+    width: 350px;
+    border-radius: 5px;
+    background-color: rgb(233, 231, 231);
+    border: none;
+    padding: 5px 10px;
+    margin-left: 0;
+}
+
+.input i{
+    height:100px;
+    padding-left:-10px;
+    margin-top:-30px;
+}
+
+
+.para10{
+    margin-left:450px;
+    font-size:18px;
+    margin-top:-20px;
+}
+
+/* ----------------------------------------Links------------------------------------------------------- */
+.unorderedlist1{
+    list-style:none;
+    color:black;
+    margin-left:650px;
+    margin-top:-150px;
+}
+
+
+.unorderedlist1 li a:hover{
+    cursor:pointer;
+    color:darkblue;
+}
+
+
+.unorderedlist1 li a {
+    color: black; 
+    font-size:14px;       
+    text-decoration: none; 
+}
+
+
+.unorderedlist2{
+    list-style:none;
+    text-decoration:none;
+    color:black;
+    margin-left:835px;
+    margin-top:-165px;
+}
+
+
+.unorderedlist2 li a:hover{
+    cursor:pointer;
+    color:darkblue;
+}
+
+
+.unorderedlist2 li a {
+    color: black;       
+    text-decoration: none; 
+    font-size:14px;
+}
+
+
+.unorderedlist3{
+    list-style:none;
+    text-decoration:none;
+    color:black;
+    margin-left:1000px;
+    margin-top:-232px;
+}
+
+
+.unorderedlist3 li a:hover{
+    cursor:pointer;
+    color:darkblue;
+}
+
+
+.unorderedlist3 li a {
+    color: black;        
+    text-decoration: none; 
+    font-size:14px;
+}
+
+
+.listheading1,.listheading2,.listheading3{
+    font-size:16px;
+}
+
+
+.logo1{
+    background-color: black;
+    margin-top:30px;
+    width:120px;
+    height:30px;
+    margin-left:400px;
+    padding-left:4px;
+}
+
+
+.list{
+    height:500px;;
+    background-color:rgb(248, 247, 247);
+    margin-left:-100px;
+}
+
+
+.para20{
+    margin-left:400px;
+    font-size:14px;
+}
+
+
+.para30{
+    margin-left:400px;
+    font-size:14px;
+}
+
+/* ------------------------------------Footer---------------------------------------------------------- */
+.last {
+    background-color: black;
+    color: white;
+    text-align: left;
+    width: 100%;
+    height:auto;
+}
+   
+
+.last i {
+    margin: 12px;                
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.lastspan{
+    display:flex;
+}
+
+
+.lastspan i {
+    color:white;
+}
+
+
+.lastspan i:hover{
+    color:blue;
+}
+
+
+.lastpara {
+    color: white;
+    margin-left: 150px;                 
+}
+
+.icons{
+    margin-left:450px;
+}
+
+

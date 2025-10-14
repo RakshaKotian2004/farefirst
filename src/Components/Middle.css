@@ -1,0 +1,217 @@
+.middle{
+    background:white;
+    background-attachment:fixed;
+}
+
+/* -----------------------------------para------------------------------------------------------------ */
+.heading1{
+    color:black;
+}
+
+
+.paragraph {
+    text-align:center;
+    padding-top:-200px;
+    margin-left:-300px;
+    font-size:20px;
+    color:black;
+}
+
+/*-----------------------------------------images-----------------------------------------------------  */
+.img {
+    display:flex;
+    margin-left:300px;
+}
+
+
+.image1, .image2, .image3 {
+    width: 150px;       
+    height: 100px;   
+    object-fit: contain; 
+    margin: 10px;        
+}
+
+.image4,.image5{
+    width:95px;
+    height: 100px;
+    object-fit: contain; 
+    margin: 10px;        
+}
+
+
+/* --------------------------------------container----------------------------------------------------- */
+.container{
+    height:310px;
+    background-color:rgb(245, 243, 243);
+}
+
+
+.heading2{
+    color:black;
+    font-weight:20px;
+    padding-top:50px;
+    margin:0;
+    margin-left:460px;
+    margin-top:-10px;
+}
+
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1px;
+    height:50px;
+}
+
+/* -------------------------------------card---------------------------------------------------------- */
+.card {
+    border: 1px solid rgb(211, 209, 209);       
+    border-radius: 10px;         
+    width: 350px; 
+    height:220px;               
+    text-align: center; 
+    margin-left :500px; 
+    margin-top:20px;
+}
+
+.card img {
+    width: 100%;                  
+    border-radius: 10px 10px 0 0; 
+}
+
+
+.card p {
+    margin: 10px 0 0;             
+    font-size: 14px;
+    color:black;
+}
+
+
+.card a{
+    text-decoration:none;
+}
+
+
+.heading2,.card{
+    gap:20px;
+}
+
+
+
+.text{
+    color:green;
+    font-size: 16px;
+    text-decoration:none;
+    margin:0;
+    margin-top:40px;
+    margin-right:250px;
+}
+
+
+/* ----------------------------------------Destination------------------------------------------------ */
+.heading4{
+    color:black;
+    text-align:center;
+    font-size:40px;
+}
+
+
+.paragragh2{
+    color:black;
+    text-align:center;
+    margin-top:-30px;
+    font-size:18px;
+}
+
+
+/* ------------------------------------------row1----------------------------------------------------- */
+.row1{
+    display:flex;
+    justify-content:center;
+    cursor:pointer;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 40px ;
+    padding-left:500px;
+    gap:20px;
+}
+
+
+.image-container {
+    position: relative; 
+}   
+
+   
+.image-text {
+    position: absolute;          
+    top: 10px;                    
+    color: white;                 
+    font-size: 16px;            
+    padding-top:110px;;             
+    bottom: 80px; 
+    left: 10px; 
+}
+
+
+.image7,.image8,.image9{
+    border-radius:10px;
+    width:300px;
+    height:200px;
+}
+
+
+
+.image7:hover{
+    transform:scale(1.05);
+}
+
+
+.image8:hover{
+    transform:scale(1.05);
+}
+
+
+.image9:hover{
+    transform:scale(1.05);
+}
+
+/* ----------------------------------------row2------------------------------------------------------ */
+.row2{
+    display:flex;
+    justify-content:center;
+    cursor:pointer;
+    width: 200px;
+    height: 150px;
+    border-radius: 30px;
+    border: 2px solid white;
+    margin: 40px ;
+    padding-left:500px;
+    gap:20px;
+}
+
+.image10,.image11,.image12{
+    border-radius:10px;
+    width:310px;
+    height:200px;
+    margin-top:20px;
+}
+
+
+.image10:hover{
+    transform:scale(1.05);
+}
+
+
+.image11:hover{
+    transform:scale(1.05);
+}
+
+
+.image12:hover{
+    transform:scale(1.05);
+}
+
+
