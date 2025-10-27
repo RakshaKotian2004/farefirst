@@ -298,7 +298,7 @@
 
 /* -------------------------------------------Responsive----------------------------------------- */
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
 .bottom {
     height: 1000px;
     padding: 20px;
@@ -433,8 +433,10 @@
 
 
   .icons {
-    margin-left: 0;
+    margin-left: -260px;
     text-align: center;
+    margin-top:30px;
+    
   }
 
   .para20,
@@ -446,7 +448,7 @@
 
 .lastpara{
     margin-left:15px;
-    font-size:18px;
+    font-size:14px;
 }
 
 
@@ -465,21 +467,20 @@
 
 
 
- */
+ 
 
 
 
 
- @media (max-width: 768px) {
+ /* @media (max-width: 768px) {
 
-  /* General Footer Container */
   .footer {
     overflow-x: hidden;
     text-align: center;
   }
 
   /* ---------------------- Download Section ---------------------- */
-  .bottom {
+  /* .bottom { 
     height: auto;
     padding: 20px;
   }
@@ -512,10 +513,10 @@
     width: 140px;
     height: auto;
     margin: 10px;
-  }
+   } */
 
   /* ---------------------- Email / Newsletter Section ---------------------- */
-  .input {
+  /* .input { 
     margin: 0;
     padding: 20px 0;
     height: auto;
@@ -551,10 +552,10 @@
 
   .button3 {
     width: 50%;
-  }
+   } */
 
   /* ---------------------- Links Section ---------------------- */
-  .list {
+  /* .list { 
     height: auto;
     margin: 0;
     padding: 20px 0;
@@ -591,10 +592,10 @@
   .listheading3 {
     margin: 10px 0;
     text-align: center;
-  }
+   }  */
 
   /* ---------------------- Final Footer Bar ---------------------- */
-  .last {
+  /* .last { 
     text-align: center;
     padding: 10px 0;
   }
@@ -616,4 +617,4 @@
   .icons i {
     margin: 8px;
   }
-}
+} */

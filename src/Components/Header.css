@@ -308,7 +308,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 /*-------------------------------- Responsive header --------------------------------------------*/
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .app {
     height: auto;
     padding-bottom: 20px;
@@ -343,7 +343,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top:8px;      
     gap: 4px;                 
     font-size: 9px; 
-    margin-left:-260px;
+    margin-left:-205px;
     padding-bottom:2px;
   }
 
@@ -360,13 +360,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .underline{
-    width:190px;
+    width:373px;
   } 
 
 
   
   .span1 i{
-    padding-right: 310px;
+    padding-right: 320px;
   }
 
    
@@ -470,22 +470,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .search-box input {
-    width: 60%;
-    margin-left:45px;
+    width: 76%;
+    margin-left:-25px;
   }
 
   .search-button{
-    margin-left:130px;
-
+    margin-left:-15px;
+    
 
   }
-} */
+}
 
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* stack items vertically */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -499,7 +499,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .header ul {
-    flex-direction: column; /* make nav items vertical */
+    flex-direction: column; 
     align-items: center;
     gap: 8px;
     padding: 0;
@@ -521,7 +521,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 16px;
      padding: 8px;
     margin-top: 8px;
-  }}
+  }} 
 
 
 /*--/---/----/---/---/-----/-------/----/-------Result.jsx-----/-----/-----/-----/----/-----/------/----/-------------- */
