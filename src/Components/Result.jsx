@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import "./Header.css";
 
 function Result() {
+  const navigate = useNavigate();
+  
   const location = useLocation();
   const { flights = [], loading = false } = location.state || {};
 
   const [openIndex, setOpenIndex] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(7);
   const toggleDropdown = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -17,8 +20,8 @@ function Result() {
       {!loading && flights.length === 0 && <p>No flights found</p>}
 
       {!loading &&
-        flights.map((flight, index) => {
-          if (!flight.from ||!flight.to ||!flight.price)         
+        flights.slice(0, visibleCount).map((flight, index) => {
+          if (!flight.from ||!flight.to ||!flight.price.amount ||!flight.from.airlineLogoUrl)         
           {
             return null; 
           }
@@ -26,8 +29,7 @@ function Result() {
           return (
   //-----------------------------Flight-card----------------------------------------------------------// 
             <div className={`flight-card ${openIndex === index ? "expanded" : ""}`}
-              key={index}
-            >
+              key={index}>
               <div className="flight-row">
   {/*----------------------------- Airline Logo---------------------------------------------------- */}
                 <div className="logo-col">
@@ -67,7 +69,7 @@ function Result() {
                     {flight.price?.symbol}
                     {flight.price?.amount}
                    </div>
-                  <button className="book-btn" onClick={() =>window.open(flight.gate?.redirectUrl, "_blank")}>
+                  <button className="book-btn"  onClick={() => window.open("/thankyou","_blank")}>
                     Book Now
                   </button>
                 </div>
@@ -115,7 +117,7 @@ function Result() {
                       {flight.total_duration?.h}h  {flight.total_duration?.m}m
                   </div> 
                   <div className="stop">
-                       Stops:{flight.totalStops} 
+                    {flight.totalStops === 0? "Direct": `Stops:${flight.totalStops} `}
                   </div>
                   </div>
                 
@@ -123,6 +125,13 @@ function Result() {
             </div>
           );
         })}
+
+         {flights.length > visibleCount && (
+  <button className="load-button" onClick={() => setVisibleCount(visibleCount + 7)}>
+    Load More
+  </button>
+)}
+
     </div>
   );
 }

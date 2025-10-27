@@ -47,7 +47,7 @@ function Header(){
   const [flights, setFlights] = useState([]); 
 
   /*----------------------------------handling Search Button-------------------------------------------*/
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   const handleSearch = async () => {
@@ -77,18 +77,18 @@ function Header(){
                   
   {/*--------------------------------------Farefirst Logo---------------------------------------------*/}
       <header className="header">
-        <a href="https://farefirst-web-clone.vercel.app/"><img src={logo} className="heading"/></a>
+        <a href="https://farefirst-web-clone.vercel.app/"target="_blank"><img src={logo} className="heading"/></a>
         
   {/*------------------------------------------list-1------------------------------------------------*/} 
         <nav>
           <ul className="nav-links">
-            <li><a href="https://www.farefirst.com/">Flights</a></li>
-            <li><a href="https://www.farefirst.com/hotels">Hotels</a></li>
-            <li><a href="https://www.farefirst.com/cars"> Cars</a></li>
-            <li><a href="https://www.farefirst.com/nomad">Nomad</a></li>
-            <li><a href="https://www.farefirst.com/esim"> eSIM <span className="new">New</span></a></li>
-            <li><a href="https://www.farefirst.com/visa">Visa</a></li>
-            <li> <a href="https://www.farefirst.com/experience">Experience</a></li>
+            <li><a href="https://www.farefirst.com/"target="_blank">Flights</a></li>
+            <li><a href="https://www.farefirst.com/hotels"target="_blank">Hotels</a></li>
+            <li><a href="https://www.farefirst.com/cars"target="_blank"> Cars</a></li>
+            <li><a href="https://www.farefirst.com/nomad"target="_blank">Nomad</a></li>
+            <li><a href="https://www.farefirst.com/esim"target="_blank"> eSIM <span className="new">New</span></a></li>
+            <li><a href="https://www.farefirst.com/visa"target="_blank">Visa</a></li>
+            <li> <a href="https://www.farefirst.com/experience"target="_blank">Experience</a></li>
           </ul>
         </nav>
           
@@ -96,14 +96,14 @@ function Header(){
   {/*-----------------------------------------list-2-----------------------------------------------*/}
         <nav>
           <ul className="nav-link">
-            <li><a href="https://www.farefirst.com/in/offers">Offers</a></li>
+            <li><a href="https://www.farefirst.com/in/offers"target="_blank">Offers</a></li>
             <li>
               <span className="span">
                 <img src={Flag} alt="Flag" className="flag" />
-                <a href="https://www.farefirst.com/#">INR </a>
+                <a href="https://www.farefirst.com/#"target="_blank">INR </a>
               </span>
             </li>
-            <li><a href="https://www.farefirst.com/login"> Login</a></li>
+            <li><a href="https://www.farefirst.com/login"target="_blank"> Login</a></li>
           </ul>
         </nav>
       </header>
@@ -125,10 +125,10 @@ function Header(){
             <i className="fa-solid fa-plane-departure"></i>
             <input
               type="text"
-              placeholder="Bengaluru"
+              placeholder="Flying from ?"
               value={inputValue}
-              onChange={(e) => {setInputValue(e.target.value); setHasSelected(false);}}
-            />
+              onChange={(e) => {setInputValue(e.target.value); 
+                setHasSelected(false);}}/>
 
             {result.length > 0 && (
               <ul className="result-list">

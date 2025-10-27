@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import "./Footer.css";
 import Phone from "./Images/Phone.png";
 import Google from "./Images/Google.svg";
@@ -11,13 +12,17 @@ import logo from "./Images/logo.svg"
 
 
 function Footer() {
+   const location = useLocation();
+   const isResultsPage = location.pathname === "/results";
+
   return (
     <div className=" footer">
 {/*-----------------------------------------Download-------------------------------------------------------*/}
+        {!isResultsPage && (
         <div className="bottom">
                <h1 className="heading1">Download our app</h1>
                <p className="para1">Unlock a world of travel possibilities with the FareFirst <br></br> app the best travel app for your mobile device.</p>
-               <img src={Phone} alt="Phone" className="phone" />
+               <img src={Phone} alt="Phone" className="phone"/>
         <div className="rows21">
             <div className="row22">
                <a href="https://play.google.com/store/apps/details?id=com.cheapflightsapp.flightbooking"><img src={Google} alt="Google" className="google" /></a>
@@ -33,9 +38,12 @@ function Footer() {
             </div>
         </div>
     </div>
+        )}  
 
     {/*----------------------------------------------Email---------------------------------------------*/}
+    
     <div className="footerpart">
+        {!isResultsPage && (
         <div className="input">
             <span className="footerspan">
                 <i className="fa-regular fa-envelope"></i>
@@ -47,6 +55,7 @@ function Footer() {
                 <button className="button3"><a href="https://www.farefirst.com/"> Subscribe</a></button>
             </form>
         </div>
+    )}   
 
     {/*------------------------------------------------Links-------------------------------------------*/}
         <div className="list">
@@ -96,8 +105,8 @@ function Footer() {
             <span className="lastspan">
                 <p className="lastpara">© 2018-2025 Amahop Technologies Pvt. Ltd. All rights reserved.</p>
                <span className="icons">
-                <a href="https://www.instagram.com/farefirst/"> <i className="fa-brands fa-instagram"></i></a>
-                <a href="https://twitter.com/farefirst"> <i className="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/farefirst/"><i className="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/farefirst"><i className="fa-brands fa-twitter"></i></a>
                 <a href="https://www.youtube.com/channel/UC6Ayzt1JslezukCej32m4PA"><i className="fa-brands fa-youtube"></i></a>
                 <a href="https://www.facebook.com/FareFirst.Official"><i className="fa-brands fa-facebook"></i></a>
                </span>

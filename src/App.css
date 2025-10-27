@@ -1,5 +1,29 @@
 html, body {
+  height:100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
+
+
+
+@media (max-width: 768px) {
+  .app {
+    background-attachment: scroll; /* improves mobile performance */
+    overflow-x: hidden; /* remove sideways scrolling */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* If your app uses flex layouts, this keeps content stacked neatly */
+  .app > * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+

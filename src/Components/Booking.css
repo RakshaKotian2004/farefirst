@@ -1,0 +1,86 @@
+
+
+.booking-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(67, 167, 67); /* full green background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji{
+    font-size:40px;
+    padding-left:140px;
+}
+
+
+.booking{
+    width:400px;
+    height:300px;
+    background-color:white;
+    border:solid;
+    border-radius:10px;
+    padding-left:40px;
+    padding-top:40px;
+}
+
+.button{
+    background-color: rgb(84, 160, 84);
+    color:white;
+    width:120px;
+    height:40px;
+    margin-left: 110px;
+    border-radius:5px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  /* Overall page layout */
+  .booking-page {
+    height: auto;
+    min-height: 100vh;  /* ensures full height on phones */
+    padding: 20px 10px;
+    background-color: rgb(67, 167, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Booking card */
+  .booking {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .emoji {
+    font-size: 35px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .booking h1 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .booking p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0 20px;
+  }
+
+  .button {
+    width: 80%;
+    height: 45px;
+    margin: 0 auto;
+    font-size: 16px;
+    display: block;
+  }
+}
