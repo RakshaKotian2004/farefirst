@@ -25,24 +25,24 @@ function Middle() {
 
   {/*----------------------------------------images---------------------------------------------------*/}
       <div className="img">
-        <a href="https://clnk.in/vMVk"> <img src={Kiwi} alt="Kiwi.com" className="image1"  /></a>
-        <a href="https://clnk.in/vMVm"> <img src={Expedia} alt="Expedia" className="image2" /></a>
-        <a href="https://clnk.in/vMVn"> <img src={Network} alt="Flight Network" className="image3" /></a>
-        <a href="https://clnk.in/vMVq" ><img src={Indigo} alt="Indigo" className="image4" /></a>
-        <a href="https://clnk.in/vMVt"><img src={Yatra} alt="Yatra" className="image5" /></a>
+        <a href="https://clnk.in/vMVk"> <img src={Kiwi} alt="Kiwi.com" className="image1"/></a>
+        <a href="https://clnk.in/vMVm"> <img src={Expedia} alt="Expedia" className="image2"/></a>
+        <a href="https://clnk.in/vMVn"> <img src={Network} alt="Flight Network" className="image3"/></a>
+        <a href="https://clnk.in/vMVq" ><img src={Indigo} alt="Indigo" className="image4"/></a>
+        <a href="https://clnk.in/vMVt"><img src={Yatra} alt="Yatra" className="image5"/></a>
       </div>
 
   {/*---------------------------------------container-------------------------------------------------*/}
       <div className="container">
         <div className="container1">
           <h2 className="heading2">Best flight offers & hotel deals</h2>
-          <a href="https://www.farefirst.com/in/offers"className="text">See all</a>
+          <a href="https://www.farefirst.com/in/offers"target="_blank"className="text">See all</a>
         </div>
       
   {/*-----------------------------------------card----------------------------------------------------*/}
       <div className="card">
-        <a href="https://www.farefirst.com/in/offers/169/up-to-20-off-on-economy-class-tickets-qatar-airways-169"> <img src={Qatar} alt="Offer" /></a>
-        <a href="https://www.farefirst.com/in/offers/169/up-to-20-off-on-economy-class-tickets-qatar-airways-169"><p >Upto 20% Off on Economy Tickets-Qatar Airways</p></a>
+        <a href="https://www.farefirst.com/in/offers/169/up-to-20-off-on-economy-class-tickets-qatar-airways-169" target="_blank"> <img src={Qatar} alt="Offer" /></a>
+        <a href="https://www.farefirst.com/in/offers/169/up-to-20-off-on-economy-class-tickets-qatar-airways-169" target="_blank"><p >Upto 20% Off on Economy Tickets-Qatar Airways</p></a>
       </div>
     </div>
 

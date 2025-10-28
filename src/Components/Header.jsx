@@ -6,21 +6,21 @@ import Flag from "./Images/Flag.png"
 
 function Header(){
 
-  const location = useLocation();
-  const isResultsPage = location.pathname === "/results";
+  const location=useLocation();
+  const isResultsPage=location.pathname==="/results";
 
   /*---------------------------input field-1:useState,useEffect-------------------------------------------*/
   
   const [inputValue,setInputValue]=useState("");
-  const [result, setResult] = useState([]);
-  const [hasSelected, setHasSelected] = useState(false);
+  const [result,setResult]=useState([]);
+  const [hasSelected,setHasSelected]=useState(false);
 
   useEffect(() => {
-    if (inputValue.length > 0 &&  !hasSelected) {
+    if (inputValue.length>0 && !hasSelected) {
       fetch(`https://autocomplete.farefirst.com/places2?term=${inputValue}&types=airport&locale=en&max=7`)
         .then((res) => res.json())
-        .then((data) => setResult(data || []))
-        .catch((err) => console.error("Error fetching airports:", err));
+        .then((data) => setResult(data||[]))
+        .catch((err) => console.error("Error fetching airports:",err));
     } else {
       setResult([]);
     }
@@ -28,44 +28,43 @@ function Header(){
 
   /*------------------------------input field-2:useState,useEffect-----------------------------------*/
   const [inputValue2,setInputValue2]=useState("");
-  const [result2, setResult2] = useState([]);
-  const [hasSelected2, setHasSelected2] = useState(false);
+  const [result2,setResult2]=useState([]);
+  const [hasSelected2,setHasSelected2]=useState(false);
 
   useEffect(() => {
-    if (inputValue2.length > 0 &&  !hasSelected2) {
+    if (inputValue2.length>0 && !hasSelected2) {
       fetch(`https://autocomplete.farefirst.com/places2?term=${inputValue2}&types=airport&locale=en&max=7`)
         .then((res) => res.json())
-        .then((data) => setResult2(data || []))
-        .catch((err) => console.error("Error fetching airports:", err));
+        .then((data) => setResult2(data||[]))
+        .catch((err) => console.error("Error fetching airports:",err));
     }else {
       setResult2([]);
     }
-  }, [inputValue2,hasSelected2]);
+  },[inputValue2,hasSelected2]);
 
   /*--------------------------------input field-3--------------------------------------------------*/
-  const [selectedDate, setSelectedDate] = useState("");
-  const [flights, setFlights] = useState([]); 
+  const [selectedDate,setSelectedDate]=useState("");
+  const [flights,setFlights]=useState([]); 
 
   /*----------------------------------handling Search Button-------------------------------------------*/
-  const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
+  const [loading,setLoading]=useState(false);
+  const navigate=useNavigate();
 
-  const handleSearch = async () => {
+  const handleSearch=async() => {
     if (!inputValue || !inputValue2 || !selectedDate) {
-      alert("Please fill departure, arrival, and date fields");
-      return;
+      return alert("Please fill departure, arrival, and date fields");
     }
     setLoading(true);  
-    const url = `https://funapiproxy-4mqabsrzhq-uc.a.run.app/flights?key=0&from=${inputValue}&to=${inputValue2}&departureDate=${selectedDate}&client=bixby&locale=IN`;
+    const url=`https://funapiproxy-4mqabsrzhq-uc.a.run.app/flights?key=0&from=${inputValue}&to=${inputValue2}&departureDate=${selectedDate}&client=bixby&locale=IN`;
 
     try {
       const response = await fetch(url);
       const data = await response.json();
       const flights = data.results || [];
-      navigate("/results", { state: { flights, loading: false } });
+      navigate("/results",{state:{ flights,loading: false } });
     } catch (err) {
-      console.error("Error fetching flights:", err);
-      alert("Failed to fetch flights. Try again.");
+      console.error("Error fetching flights:",err);
+      alert("Failed to fetch flights.Try again.");
     } finally {
       setLoading(false); 
     }
@@ -76,7 +75,7 @@ function Header(){
     <div className={`app ${isResultsPage ? "small-header" : ""}`}>
                   
   {/*--------------------------------------Farefirst Logo---------------------------------------------*/}
-      <header className="header">
+      <div className="header">
         <a href="https://farefirst-web-clone.vercel.app/"target="_blank"><img src={logo} className="heading"/></a>
         
   {/*------------------------------------------list-1------------------------------------------------*/} 
@@ -106,7 +105,7 @@ function Header(){
             <li><a href="https://www.farefirst.com/login"target="_blank"> Login</a></li>
           </ul>
         </nav>
-      </header>
+      </div>
       <hr className="underline"></hr>
 
   {/*----------------------------------------input fields------------------------------------------*/}
@@ -123,19 +122,16 @@ function Header(){
         <div className="search-box">
           <span className="span1">
             <i className="fa-solid fa-plane-departure"></i>
-            <input
-              type="text"
-              placeholder="Flying from ?"
-              value={inputValue}
+            <input type="text" placeholder="Flying from ?" value={inputValue}
               onChange={(e) => {setInputValue(e.target.value); 
-                setHasSelected(false);}}/>
+                                setHasSelected(false);}}/>
 
             {result.length > 0 && (
               <ul className="result-list">
                 {result.map((item, index) => (
                   <li key={index} onClick={() => { setInputValue(item.name); 
-                     setResult([]); 
-                     setHasSelected(true); }}>
+                                                   setResult([]); 
+                                                   setHasSelected(true); }}>
                     <span className="code-box">{item.code}</span> {item.name}
 
                   </li>
@@ -147,22 +143,17 @@ function Header(){
   {/*--------------------------------------input field-2---------------------------------------------*/}
           <span className="span1">
             <i className="fa-solid fa-plane-arrival"></i>
-            <input
-              type="text"
-              placeholder="Flying to ?"
-              value={inputValue2}
+            <input type="text" placeholder="Flying to ?" value={inputValue2}
               onChange={(e) => { setInputValue2(e.target.value); 
-                setHasSelected2(false); }}
-            />
+                                 setHasSelected2(false); }}/>
 
             {result2.length > 0 && (
               <ul className="result-list">
                 {result2.map((item, index) => (
                   <li key={index} onClick={() => { setInputValue2(item.name); 
-                        setResult2([]); 
-                        setHasSelected2(true); }}>
+                                                   setResult2([]); 
+                                                   setHasSelected2(true); }}>
                      <span className="code-box">{item.code}</span> {item.name}
-
                   </li>
                 ))}
               </ul>
@@ -174,9 +165,7 @@ function Header(){
                 
           <span className="span1">
             <i className="fa-solid fa-calendar calendar-icon"></i>
-              <input 
-               type="date"
-               value={selectedDate}
+              <input type="date" value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
               onFocus={(e) => e.target.showPicker()}
             />
