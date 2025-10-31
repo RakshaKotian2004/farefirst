@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation,Link } from "react-router-dom";
 import './Header.css';
 import logo from "./Images/logo.svg"
 import Flag from "./Images/Flag.png"
@@ -76,12 +76,12 @@ function Header(){
                   
   {/*--------------------------------------Farefirst Logo---------------------------------------------*/}
       <div className="header">
-        <a href="https://farefirst-web-clone.vercel.app/"target="_blank"><img src={logo} className="heading"/></a>
-        
+        <Link to="/"><img src={logo} className="heading" alt="FareFirst Logo"/></Link>
+
   {/*------------------------------------------list-1------------------------------------------------*/} 
         <nav>
           <ul className="nav-links">
-            <li><a href="https://www.farefirst.com/"target="_blank">Flights</a></li>
+            <li><Link to="/">Flights</Link></li>
             <li><a href="https://www.farefirst.com/hotels"target="_blank">Hotels</a></li>
             <li><a href="https://www.farefirst.com/cars"target="_blank"> Cars</a></li>
             <li><a href="https://www.farefirst.com/nomad"target="_blank">Nomad</a></li>
